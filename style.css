@@ -13,16 +13,16 @@ body{
     background-color: #fffefe;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #000000;
+    color: #0077ff;
 
 }
 
 h2,.white{
-    color: rgb(0, 0, 0);
+    color: #0077ff;
 }
 
 a{
-    color: #000000;
+    color: #0077ff;
     text-decoration: none;
 }
 /* section 1 */
@@ -73,7 +73,7 @@ a{
 /* animations / utilities */
 .section-2 a:hover{
     font-size: 1.3rem;
-    color: rgb(0, 0, 0);
+    color: #0077ff;
     cursor: pointer;
     transition: 0.2s;
 }
