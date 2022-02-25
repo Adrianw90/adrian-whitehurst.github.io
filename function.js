@@ -1,32 +1,46 @@
-function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
-
-var app = document.getElementsByTagName("BODY")[0];
-if (localStorage.lightMode == "dark") {
-    app.setAttribute("data-light-mode", "dark");
-}
-
-function toggle_light_mode() {
-    var app = document.getElementsByTagName("BODY")[0];
-    if (localStorage.lightMode == "dark") 
-    {
-    localStorage.lightMode = "light";
-    app.setAttribute("data-light-mode", "light");
-    } 
-    else 
-    {
-    localStorage.lightMode = "dark";
-    app.setAttribute("data-light-mode", "dark");
-    }
-    console.log("lightMode = " + localStorage.lightMode);
-}
-
-document.getElementById('dark-mode-btn').addEventListener('click', function (e) {
-    const toggler = document.body;
-    toggler.classList.toggle('dark-mode');
-    const target = e.target;
-    target.classList.toggle('fa-moon');
-    target.classList.toggle('fa-sun');
-});
+(function($) { "use strict";
+ 
+	$(function() {
+		var header = $(".start-style");
+		$(window).scroll(function() {    
+		var scroll = $(window).scrollTop();
+		
+		if (scroll >= 10) {
+		header.removeClass('start-style').addClass("scroll-on");
+		} else {
+		header.removeClass("scroll-on").addClass('start-style');
+		}
+		});
+	});		
+		
+	//Animation
+	
+	$(document).ready(function() {
+		$('body.hero-anime').removeClass('hero-anime');
+	});
+ 
+	//Menu On Hover
+		
+	$('body').on('mouseenter mouseleave','.nav-item',function(e){
+		if ($(window).width() > 750) {
+		var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+		setTimeout(function(){
+		_d[_d.is(':hover')?'addClass':'removeClass']('show');
+		},1);
+		}
+	});	
+	
+	//Switch light/dark
+	
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("dark")) {
+		$("body").removeClass("dark");
+		$("#switch").removeClass("switched");
+		}
+		else {
+		$("body").addClass("dark");
+		$("#switch").addClass("switched");
+		}
+	});  
+	
+  })(jQuery);
