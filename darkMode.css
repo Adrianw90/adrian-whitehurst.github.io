@@ -102,7 +102,7 @@
 /* CSS styling for Dark-mode and light mode toggle */
 
 i.toggler {
-    color: white;
+    color: rgb(0, 0, 0);
     float: right;
     font-size: 20px;
 }
