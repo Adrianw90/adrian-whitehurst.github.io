@@ -209,6 +209,32 @@ a{
   }
 }
 
+/* CSS styling for Dark-mode and light mode toggle */
+
+i.toggler {
+  color: white;
+  float: right;
+  font-size: 20px;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode i.toggler {
+  color: orange;
+}
+
+.dark-mode .container {
+  background-color: white;
+}
+
+.dark-mode h1, .dark-mode h3, .dark-mode h4 {
+  color: black;
+}
+
+/* End of CSS Styling for dark and light mode toggle */
+
 /* Center images*/
 .center {
     display: block;
