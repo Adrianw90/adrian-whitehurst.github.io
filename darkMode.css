@@ -79,7 +79,7 @@
 }
 @media screen and (max-width: 750px) {
     .topnav.responsive {position: static;}
-    .topnav.responsive .icon {
+    .topnav.responsive a.icon {
       position: absolute;
       right: 0;
       top: 0;
