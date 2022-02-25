@@ -13,7 +13,7 @@
 }
       
 .active {
-    background-color: #ffffff;
+    color: rgb(255, 255, 255);
 }
       
 .topnav .icon {
@@ -60,7 +60,7 @@
 }
       
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: rgb(119, 119, 119);
     color: black;
 }
       
